@@ -53,7 +53,7 @@ Mongodb нь nosql төрлийн өгөгдлийн сан юм.<br>
 ## 1. React-native-cli
 
 #### Та Visual code эсвэл өөрт байгаа эдитороо ажилуулна. [Заавар харах бол](https://facebook.github.io/react-native/docs/getting-started.html)
-
+    Терминал цонхон дээр доорх коммандыг ажиллуулна.
     npm install -g react-native-cli    
     
     
