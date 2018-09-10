@@ -1,91 +1,56 @@
 # Ажиллах орчин үүсгэх
 
-#### 1. Node.js санг суулгана. Javascript дээр суурилсан програмчлалын хэлүүд нь энэхүү сан дээр сууриллаж ажилладаг.
+## 1. Node.js санг суулгана. Javascript дээр суурилсан програмчлалын хэлүүд нь энэхүү сан дээр сууриллаж ажилладаг.
 
-## Node.js суулгах
+#### Node.js суулгах
     Татах хаяг[https://nodejs.org/en/download/](https://nodejs.org/en/download/)
     Өөрийн үйлдлийн системд таарсан хувилбараа татаж авч суулгана.
     Амжилттай суулгасан бол. Терминал, powershell, cmd аль байгаа дээрээ 
     node -v
     npm -v 
-    Энэхүү коммандууд хэвийн ажиллаж суулгасан хувилбарыг харуулна.
+    Энэхүү коммандуудаар хэвийн ажиллаж байгааг мөн суулгасан хувилбарыг харуулна.
 
 
-## How to install
+## 2. Код эдитор суулгах
+Програмаа бичих хэрэгсэл юм.<br>
 
-    git clone https://github.com/evheniy/react-awesome-app.git
-    cd react-awesome-app
-    npm i
+#### Та Visual code-ыг татаж суулгах бол [татах хаяг](https://code.visualstudio.com/)
+
+    Татаж аваад суулгасны дараа. Visual code ажиллуулаад ctrl+` товчийг дарснаар таны терминал цонх гарч ирнэ. 
+    Windows систем бол та command promt эсвэл powershell аль дээр нь ажиллууллахаа сонгож болно.
     
-## How to run databases with docker
-
-#### Start:
     
-    npm run db:start
+## 3. Docker суулгах. 
+Docker нь аппликейшн үүсгэх, суурилуулах, ашиглахад хялбар болгох хэрэгсэл юм.<br>
+
+#### Та Docker эндээс татаж суулгана.[татах хаяг](https://store.docker.com/editions/community/docker-ce-desktop-windows)
     
-#### Stop:
-
-    npm run db:stop
+    Татаж авсан хувилбараа суулгаад. docker -v шалгана.
     
-## How to run server 
+## 4. Mongodb суулгах. 
+Mongodb нь nosql төрлийн өгөгдлийн сан юм.<br>
 
-### Node.js
-
-#### Start ([http://localhost:3000/](http://localhost:3000/)):
-
-    npm run server:start
+#### Та Mongodb эндээс татаж суулгана.[татах хаяг](https://www.mongodb.com/download-center#enterprise)
     
-#### Stop:
+    Татаж авсан хувилбараа суулгаад. Шалгах бол суусан зам дээр нь очоод .\mongo --help (Windows powershell) ажиллуулж үзнэ
 
-    npm run server:stop
+# React-native програм ажиллуулах
+
+Энэхүү санг npm-ээр удирдаж суулгана..<br>
+
+## 1. React-native-cli
+
+#### Та Visual code эсвэл өөрт байгаа эдитороо ажилуулна.[заавар харах бол](https://facebook.github.io/react-native/docs/getting-started.html)
+
+    npm install -g react-native-cli    
     
-### Docker
-
-#### Build:
-
-    npm run docker:build
     
-#### Run ([http://localhost/](http://localhost/)):
+## 2. Апп аа үүсгэх. 
 
-    npm run docker:run
-
-#### Stop:
-
-    npm run docker:stop
+#### Та Docker эндээс татаж суулгана.[татах хаяг](https://store.docker.com/editions/community/docker-ce-desktop-windows)
     
-### Docker Compose
+    react-native init HelloWorld
+    cd HelloWorld (Visual code нээх)
 
-#### Run ([https://localhost/](https://localhost/)):
 
-    npm run compose:up
     
-#### Stop:
-
-    npm run compose:down
-
-#### Clear:
-
-    npm run compose:clear
-    
-### URLs to test
-
-| Action       | Method | Path           | Request             | Response           |
-|--------------|--------|----------------|---------------------|--------------------|
-| Registration | POST   | /users         | { email, password } | { user, error }    |
-| Login        | POST   | /tokens        | { email, password } | { token, error }   |
-| User list    | GET    | /users         | { token }           | { users[], error } |
-| User profile | GET    | /users/:id     | { token }           | { user, error }    |
-| User editing | PATCH  | /users/:id     | { token, password } | { user, error }    |
-| Logout       | DELETE | /tokens/:token | { token }           | { empty, error }   |
-
-### GraphQL
-
-#### URL: [/graphql](https://localhost/graphql)
-
-## How to test
-
-    npm t
-    
-## Clear docker
-
-    npm run clear
